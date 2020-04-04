@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "216304397280",
+    "firebase_url": "https://hardy-city-269707.firebaseio.com",
+    "project_id": "hardy-city-269707",
+    "storage_bucket": "hardy-city-269707.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216304397280:android:0597f591e626668f6c1985",
+        "android_client_info": {
+          "package_name": "com.khan.cs5_dictionary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216304397280-blgb1o7ms1cgoddrj9odi8ke6egb6v33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClNSCUVxdL4XTNSAEYq6atRJForMjLqEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216304397280-blgb1o7ms1cgoddrj9odi8ke6egb6v33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
