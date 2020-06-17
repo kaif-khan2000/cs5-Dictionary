@@ -1,6 +1,4 @@
 import 'dart:math';
-
-import 'package:cs5_dictionary/screens/home/doc_list.dart';
 import 'package:cs5_dictionary/screens/modules.dart';
 import 'package:cs5_dictionary/services/database.dart';
 import 'package:flutter/material.dart';

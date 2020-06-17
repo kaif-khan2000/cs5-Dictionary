@@ -7,7 +7,8 @@ class AuthService {
 
   //user From firebase user
   User _userFromFirebaseUser(FirebaseUser user){
-    return user!=null ? User(uid:user.uid) : null;
+    
+    return user!=null ? User(uid:user.uid,email:user.email) : null;
   }
   
   //user stream
@@ -36,7 +37,7 @@ class AuthService {
   Future signInWithEmailAndPassword(String email,String password) async {
     try{
 
-     AuthResult result = await _auth.signInWithEmailAndPassword(email: email, password: password);
+     AuthResult result = await _auth.signInWithEmailAndPassword(email: email.trim(), password: password);
      FirebaseUser user = result.user;
      return _userFromFirebaseUser(user); 
     }catch(e){
@@ -50,7 +51,7 @@ class AuthService {
   Future registerWithEmailAndPassword(String email,String password) async {
     try{
 
-     AuthResult result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
+     AuthResult result = await _auth.createUserWithEmailAndPassword(email: email.trim(), password: password);
      FirebaseUser user = result.user;
      return _userFromFirebaseUser(user); 
     }catch(e){

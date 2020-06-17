@@ -9,6 +9,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -16,8 +17,11 @@ class MyApp extends StatelessWidget {
       value: AuthService().user,
       child: MaterialApp(
         home: Wrapper(),
-        debugShowCheckedModeBanner: false,    
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark(),    
       ),
+    )??Scaffold(
+      body:Text('Something went wrong'),
     );
   }
 }

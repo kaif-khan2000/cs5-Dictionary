@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cs5_dictionary/models/user.dart';
 import 'package:cs5_dictionary/screens/about/about.dart';
+import 'package:cs5_dictionary/screens/chat/chat.dart';
 import 'package:cs5_dictionary/services/auth.dart';
 import 'package:cs5_dictionary/services/database.dart';
 import 'package:cs5_dictionary/sharable/doc_tile.dart';
@@ -8,6 +10,8 @@ import 'package:provider/provider.dart';
 
 
 class DocList extends StatefulWidget {
+  User user;
+  DocList({this.user});
   @override
   _DocListState createState() => _DocListState();
 }
@@ -21,7 +25,7 @@ class _DocListState extends State<DocList> {
   @override
   Widget build(BuildContext context) {
     dynamic doclist;
-    
+    print('doclist:${widget.user.email}');
     doclist = Provider.of <QuerySnapshot>(context);
     int len = 0;
     List<dynamic> list;
@@ -73,6 +77,37 @@ class _DocListState extends State<DocList> {
             children: List.generate(len, (index) {
               return DocTile(str:list[index],doclist:doclist);
             }),
+          ),
+          bottomNavigationBar: BottomAppBar(
+            color: Colors.blueGrey[900],
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                  child: Material(
+                    color: Colors.blue,
+                    elevation: 6,
+                    borderRadius: BorderRadius.circular(30),
+                    child: MaterialButton(
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => Chat(user: widget.user,),
+                        ));
+                      },
+                      minWidth: 200,
+                      height: 60,
+                      child: Text('KASE',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
      );
   }

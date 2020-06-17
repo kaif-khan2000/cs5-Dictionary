@@ -1,8 +1,3 @@
-//import 'dart:io';
-
-import 'package:cs5_dictionary/screens/documents/open_pdf.dart';
-//import 'package:cs5_dictionary/screens/documents/pdf_services.dart';
-//import 'package:cs5_dictionary/sharable/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -32,17 +27,6 @@ class _DocumentTileState extends State<DocumentTile> {
             onPressed: () async  {
               String url = docs['link'];
               launch(url);
-              // if(docs['link'] != "" && docs['link'] != null){
-              //   String path;
-                
-                
-              //  try{
-              //   Navigator.push(context,MaterialPageRoute(builder: (context) => OpenPdf(url: docs['link'],docName: docs['name'],),));
-              //  }catch(e){
-              //    print(e.toString());
-              //  }
-                
-              // }
             },
             child: ListTile(
             leading: CircleAvatar(

@@ -25,7 +25,7 @@ class _ModuleState extends State<Module> {
         //print(mod['1'].length);
       }
     }
-
+    List modules = [1,2,3,4,5,'TB','QP','Assign'];
     return Scaffold(
       backgroundColor: Colors.blueGrey[800],
       appBar: AppBar(
@@ -43,8 +43,8 @@ class _ModuleState extends State<Module> {
             padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
             crossAxisCount:2,
             crossAxisSpacing: 10,
-            children: List.generate(5, (index) {
-              return ModuleTile(str:(index+1).toString(),mod: mod[(index+1).toString()],);
+            children: List.generate(modules.length, (index) {
+              return ModuleTile(str:modules[index].toString(),mod: mod[modules[index].toString()],);
             }),
       ),
     );

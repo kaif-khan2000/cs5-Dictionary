@@ -4,7 +4,7 @@ class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      //backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.blueGrey[900],
         title: Text("About"),
@@ -78,6 +78,11 @@ class About extends StatelessWidget {
                   ),  
                 ),
               ],              
+            ),
+            SizedBox(height: 15,),
+            Text('This App is for total educational purpose.\nA new feature'+
+              ' is added to this app known as KASE.\nKASE stands for "Kaif\'s Application for Statement Exchange."\nWith this you can able to share Statements(Chat) with your friends(Classmates).',
+              style: TextStyle(fontSize: 20),
             ),
           ],
         ),

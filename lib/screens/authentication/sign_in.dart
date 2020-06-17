@@ -45,20 +45,14 @@ class _SignInState extends State<SignIn> {
         child: Form(
           key: _formkey,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 20,),
-              Text(
-                "CS5 Dictionary",
-                style: TextStyle(
-                  color: Colors.blueGrey[100],
-                  fontSize: 55,
-                ),  
-              ),
+          
               SizedBox(height: 30),
               TextFormField(
                 decoration: InputDecoration(
                   hintText: 'Email',
-                  fillColor: Colors.white,
+                  fillColor: Colors.black,
                   filled: true,
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white,width: 2),
@@ -78,7 +72,7 @@ class _SignInState extends State<SignIn> {
               TextFormField(
                 decoration: InputDecoration(
                   hintText: 'Password',
-                  fillColor: Colors.white,
+                  fillColor: Colors.black,
                   filled: true,
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white,width: 2),
